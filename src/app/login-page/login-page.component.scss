@@ -3,23 +3,37 @@
   justify-content: center;
   text-align: center;
 
-  .login-form{
+  form{
 
-    .input-group{
-      margin: 5px;
-    }
-
-    .input-group{
-      button{
-        appearance: none;
-        margin-top: 1.5rem;
+    .form-group{
+      margin: 15px 5px;
+      position: relative;
+      label{
+        margin-right: 10px;
         font-size: 1.5rem;
-        color: #f70505;
-        padding: 3px 20px;
+        font-family: christmas;
+      }
+
+      input{
+        appearance: none;
         border: 3.5px solid #46db4b;
         border-radius: 15px;
-        background-color: #d1d1d1;
+        padding: 5px 15px;
+        font-size: 1rem;
       }
+
+    }
+
+
+    button{
+      appearance: none;
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+      color: #f70505;
+      padding: 3px 20px;
+      border: 3.5px solid #46db4b;
+      border-radius: 15px;
+      background-color: #d1d1d1;
     }
 
   }
@@ -34,4 +48,33 @@
     background-color: #d1d1d1;
   }
 
+}
+
+.snow-man{
+  position: absolute;
+  right: 100px;
+  top: 10px;
+}
+
+.snow-globe{
+  position: absolute;
+  left: -37px;
+  top: 59px;
+}
+
+.background-one{
+  position:absolute;
+  left: 0px;
+}
+
+.background-five{
+  position:absolute;
+  left: 77%;
+}
+
+.wreath{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 150px;
 }

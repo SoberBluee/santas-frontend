@@ -15,7 +15,7 @@ export class LoginPageComponent {
   public constructor(private router: Router){}
 
   public loginForm = new FormGroup({
-    email: new FormControl(Validators.email,),
+    email: new FormControl(),
     password: new FormControl(),
   })
 
