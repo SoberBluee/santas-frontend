@@ -1,1 +1,36 @@
-<p>santas-list works!</p>
+<!-- app.component.html -->
+<img class="background-one" src="../../assets/background_one.png">
+<img class="background-two" src="../../assets/background_one.png">
+<img class="background-three" src="../../assets/background_one.png">
+<img class="background-four" src="../../assets/background_one.png">
+<img class="background-five" src="../../assets/background_one.png">
+<div class="wishlist-container">
+
+  <h2 class="wishlist-title christmas-font ">{{ wishlistTitle }}</h2>
+
+  <div class="form-container">
+    <label for="itemName" class="form-label">Item Name:</label>
+    <input type="text" id="itemName" name="itemName" [(ngModel)]="itemName" required class="form-input">
+
+    <button type="button" class="form-button christmas-font" (click)="addItem()">Add Item</button>
+  </div>
+
+  <ul class="wishlist-items">
+    <li class="christmas-font">
+      toys      £10       8/10
+      <button class="edit-button">Edit</button>
+      <button class="delete-button">Delete</button>
+    </li>
+    <li class="christmas-font">
+      bike      £100      9/10
+      <button class="edit-button">Edit</button>
+      <button class="delete-button">Delete</button>
+    </li>
+    <li *ngFor="let item of wishlist; let i = index" class="wishlist-item">
+
+      {{ item.name }}
+      <button (click)="editItem(i)" class="edit-button">Edit</button>
+      <button (click)="deleteItem(i)" class="delete-button">Delete</button>
+    </li>
+  </ul>
+</div>
