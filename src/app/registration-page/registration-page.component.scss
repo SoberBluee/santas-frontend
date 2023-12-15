@@ -1,0 +1,46 @@
+.register-wrapper{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  .form-wrapper{
+    form{
+
+      .form-group{
+        margin: 15px 5px;
+
+        label{
+          margin-right: 10px;
+          font-size: 1.5rem;
+          font-family: christmas;
+        }
+
+        input{
+          appearance: none;
+          border: 3.5px solid #46db4b;
+          border-radius: 15px;
+          padding: 5px 15px;
+          font-size: 1rem;
+        }
+
+      }
+
+
+      button{
+        appearance: none;
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        color: #f70505;
+        padding: 3px 20px;
+        border: 3.5px solid #46db4b;
+        border-radius: 15px;
+        background-color: #d1d1d1;
+      }
+    }
+  }
+}
+
+.error-message{
+  color: red;
+  font-size: 1.5rem;
+}

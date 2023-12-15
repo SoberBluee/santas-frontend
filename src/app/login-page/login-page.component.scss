@@ -2,4 +2,36 @@
   display: flex;
   justify-content: center;
   text-align: center;
+
+  .login-form{
+
+    .input-group{
+      margin: 5px;
+    }
+
+    .input-group{
+      button{
+        appearance: none;
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        color: #f70505;
+        padding: 3px 20px;
+        border: 3.5px solid #46db4b;
+        border-radius: 15px;
+        background-color: #d1d1d1;
+      }
+    }
+
+  }
+
+  .go-to-register{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    padding: 3px 20px;
+    color: #f70505;
+    border: 3.5px solid #46db4b;
+    border-radius: 15px;
+    background-color: #d1d1d1;
+  }
+
 }

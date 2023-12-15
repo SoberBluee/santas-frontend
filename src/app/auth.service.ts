@@ -7,15 +7,19 @@ import RegistrationPayload from './interfaces/registration.interface';
 enum AuthEnum {
   apiUrl = 'localhost:5173'
 }
-
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  public login(payload: {email: string, password: string}){
-    this.http.post(AuthEnum.apiUrl, payload)
+  public login(payload: LoginPayload){
+    this.http.post(AuthEnum.apiUrl, payload);
+  }
+
+  public register(payload: RegistrationPayload){
+    return this.http.post(AuthEnum.apiUrl, payload);
   }
 }
