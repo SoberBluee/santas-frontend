@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { AuthService } from '../auth.service';
 import LoginPayload from '../interfaces/login.interface';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 export interface RegistrationForm{
   name: string,
@@ -63,10 +64,19 @@ export class RegistrationFormComponent implements OnInit {
   onSubmit() {
     const formValues: RegistrationForm = this.registrationForm.value;
     if(formValues.confirmPassword !== formValues.password) return;
-    console.log('form request');
-    this.authService.register(formValues).pipe().subscribe({
+
+    const payload = {
+      name: formValues.name,
+      email: formValues.email,
+      password: formValues.password,
+    }
+
+    this.authService.register(payload).pipe().subscribe({
       next: (response) => {
         console.log(response);
+      },
+      error: (error)=> {
+        console.log(error);
       }
     });
   }

@@ -1,11 +1,19 @@
 <div class="register-wrapper">
   <div class="form-wrapper" >
+      <img class="background-one" src="../../assets/background_one.png">
+      <img class="background-two" src="../../assets/background_one.png">
+      <img class="background-three" src="../../assets/background_one.png">
+      <img class="background-four" src="../../assets/background_one.png">
+      <img class="background-five" src="../../assets/background_one.png">
 
       <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
+          <img class="snow-man" width="100px" width="100px" src="../../assets/snow_man.png" alt="snowman">
+          <img class="snow-globe" width="150px" width="150px" src="../../assets/snow-globe.png">
+
           <label for="name">Name:</label>
           <input type="text" id="name" formControlName="name" class="form-control" placeholder="Enter your name">
-          <div class="error-message">
+          <div *ngIf="registrationForm.get('name').invalid && registrationForm.get('name').touched" class="error-message">
             Please enter a valid name.
           </div>
         </div>
@@ -13,7 +21,7 @@
         <div class="form-group">
           <label for="email">Email:</label>
           <input type="email" id="email" formControlName="email" class="form-control" placeholder="Enter your email">
-          <div class="error-message">
+          <div *ngIf="registrationForm.get('email').invalid && registrationForm.get('email').touched" class="error-message">
             Please enter a valid email.
           </div>
         </div>
@@ -21,7 +29,7 @@
         <div class="form-group">
           <label class="form-label" for="password">Password:</label>
           <input type="password" id="password" formControlName="password" class="form-control" placeholder="Enter your password">
-          <div class="error-message">
+          <div class="error-message" *ngIf="registrationForm.get('password').invalid && registrationForm.get('password').touched">
             {{getErrorMessage()}}
           </div>
         </div>
@@ -35,7 +43,12 @@
         </div>
 
         <button type="submit" class="register-btn">Submit</button>
+
+        <img class="wreath" src="../../assets/christmas-wreath.png">
       </form>
+
+
+
 
   </div>
 </div>

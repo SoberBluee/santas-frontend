@@ -5,7 +5,7 @@ import LoginPayload from './interfaces/login.interface';
 import RegistrationPayload from './interfaces/registration.interface';
 
 enum AuthEnum {
-  apiUrl = 'localhost:5173'
+  apiUrl = 'http://localhost:5173'
 }
 @Injectable({
   providedIn: 'root'
@@ -20,6 +20,8 @@ export class AuthService {
   }
 
   public register(payload: RegistrationPayload){
-    return this.http.post(AuthEnum.apiUrl, payload);
+    console.log(payload);
+
+    return this.http.post(AuthEnum.apiUrl + '/register', payload);
   }
 }
