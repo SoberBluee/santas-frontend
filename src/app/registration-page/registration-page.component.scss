@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'christmas';
+  src: url('../../assets/christmas.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.christmas-font{
+  font-family: christmas;
+}
+
 .register-wrapper{
   display: flex;
   justify-content: center;
@@ -73,3 +84,4 @@
   position: absolute;
   bottom: 150px;
 }
+

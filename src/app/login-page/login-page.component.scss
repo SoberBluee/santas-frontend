@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'christmas';
+  src: url('../../assets/christmas.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.christmas-font{
+  font-family: christmas;
+}
+
 .login-wrapper{
   display: flex;
   justify-content: center;
@@ -52,14 +63,14 @@
 
 .snow-man{
   position: absolute;
-  right: 100px;
-  top: 10px;
+  right: 328px;
+  top: 698px;
 }
 
 .snow-globe{
   position: absolute;
-  left: -37px;
-  top: 59px;
+  left: 221px;
+  top: 419px;
 }
 
 .background-one{
